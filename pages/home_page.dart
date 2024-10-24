@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models/friend.dart';
 import '../services/friend_service.dart';
 import '../widgets/friend_list_tile.dart';
 import 'add_friend_page.dart';

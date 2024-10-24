@@ -6,7 +6,7 @@ import 'services/friend_service.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(HedieatyApp());
+  runApp(const HedieatyApp());
 }
 
 class HedieatyApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class HedieatyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.purple,
         ),
-        home: HomePage(),
+        home: const HomePage(),
       ),
     );
   }
