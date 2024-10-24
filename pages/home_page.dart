@@ -8,6 +8,8 @@ import '../widgets/friend_list_tile.dart';
 import 'add_friend_page.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -25,10 +27,10 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hedieaty'),
+        title: const Text('Hedieaty'),
         actions: [
           IconButton(
-            icon: Icon(Icons.person_add),
+            icon: const Icon(Icons.person_add),
             onPressed: () {
               // Navigate to Add Friends Page
               Navigator.push(
@@ -39,13 +41,13 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(60.0),
+          preferredSize: const Size.fromHeight(60.0),
           child: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search Friends',
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -60,7 +62,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: friendsList.isEmpty
-          ? Center(child: Text('No friends found.'))
+          ? const Center(child: Text('No friends found.'))
           : ListView.builder(
               itemCount: friendsList.length,
               itemBuilder: (context, index) {
@@ -72,8 +74,8 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           // Navigate to Create Event/List Page
         },
-        label: Text('Create Your Own Event/List'),
-        icon: Icon(Icons.add),
+        label: const Text('Create Your Own Event/List'),
+        icon: const Icon(Icons.add),
       ),
     );
   }

@@ -6,7 +6,7 @@ import '../models/friend.dart';
 class FriendGiftListPage extends StatelessWidget {
   final Friend friend;
 
-  const FriendGiftListPage({Key? key, required this.friend}) : super(key: key);
+  const FriendGiftListPage({super.key, required this.friend});
 
   @override
   Widget build(BuildContext context) {

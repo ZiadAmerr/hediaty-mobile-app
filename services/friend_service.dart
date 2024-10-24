@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../models/friend.dart';
 
 class FriendService with ChangeNotifier {
-  List<Friend> _friendsList = [
+  final List<Friend> _friendsList = [
     // Sample data
     Friend(
       id: '1',

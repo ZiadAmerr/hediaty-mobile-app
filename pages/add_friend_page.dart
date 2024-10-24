@@ -8,6 +8,8 @@ import '../services/friend_service.dart';
 class AddFriendPage extends StatelessWidget {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _profilePictureUrlController = TextEditingController();
+
+  AddFriendPage({super.key});
   // Implement controllers for phone number or contact selection if needed
 
   @override
@@ -16,27 +18,27 @@ class AddFriendPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Friend'),
+        title: const Text('Add Friend'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
               controller: _nameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Friend\'s Name',
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextField(
               controller: _profilePictureUrlController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Profile Picture URL',
               ),
             ),
             // Add fields or buttons for phone number/contact selection
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             ElevatedButton(
               onPressed: () {
                 // Validate inputs
@@ -55,7 +57,7 @@ class AddFriendPage extends StatelessWidget {
                 friendService.addFriend(newFriend);
                 Navigator.pop(context);
               },
-              child: Text('Add Friend'),
+              child: const Text('Add Friend'),
             ),
           ],
         ),

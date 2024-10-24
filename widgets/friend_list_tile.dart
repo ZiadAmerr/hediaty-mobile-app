@@ -7,7 +7,7 @@ import '../pages/friend_gift_list_page.dart';
 class FriendListTile extends StatelessWidget {
   final Friend friend;
 
-  const FriendListTile({Key? key, required this.friend}) : super(key: key);
+  const FriendListTile({super.key, required this.friend});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class FriendListTile extends StatelessWidget {
       ),
       title: Text(friend.name),
       subtitle: Text('Upcoming Events: ${friend.upcomingEventsCount}'),
-      trailing: Icon(Icons.chevron_right),
+      trailing: const Icon(Icons.chevron_right),
       onTap: () {
         // Navigate to Friend's Gift Lists Page
         Navigator.push(
