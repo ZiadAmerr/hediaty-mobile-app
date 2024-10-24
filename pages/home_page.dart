@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../services/friend_service.dart';
 import '../widgets/friend_list_tile.dart';
 import 'add_friend_page.dart';
+import 'add_edit_event_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -72,6 +73,12 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           // Navigate to Create Event/List Page
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddEditEventPage(),
+            ),
+          );
         },
         label: const Text('Create Your Own Event/List'),
         icon: const Icon(Icons.add),
